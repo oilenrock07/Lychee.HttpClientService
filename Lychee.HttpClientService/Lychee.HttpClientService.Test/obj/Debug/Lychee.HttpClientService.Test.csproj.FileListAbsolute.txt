@@ -17,3 +17,5 @@ C:\Cawi\DEV\Lychee\Lychee.HttpClientService\Lychee.HttpClientService\Lychee.Http
 C:\Cawi\DEV\Lychee\Lychee.HttpClientService\Lychee.HttpClientService\Lychee.HttpClientService.Test\bin\Debug\Newtonsoft.Json.dll
 C:\Cawi\DEV\Lychee\Lychee.HttpClientService\Lychee.HttpClientService\Lychee.HttpClientService.Test\bin\Debug\Lychee.HttpClientService.pdb
 C:\Cawi\DEV\Lychee\Lychee.HttpClientService\Lychee.HttpClientService\Lychee.HttpClientService.Test\bin\Debug\Newtonsoft.Json.xml
+C:\Cawi\DEV\Lychee\Lychee.HttpClientService\Lychee.HttpClientService\Lychee.HttpClientService.Test\bin\Debug\SimpleInjector.dll
+C:\Cawi\DEV\Lychee\Lychee.HttpClientService\Lychee.HttpClientService\Lychee.HttpClientService.Test\bin\Debug\SimpleInjector.xml
