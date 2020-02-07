@@ -2,9 +2,9 @@
 
 namespace Lychee.HttpClientService
 {
-    public class HttpClientServiceModule
+    public static class HttpClientServiceModule
     {
-        public void Register(Container container)
+        public static void RegisterLycheeHttpClientService(this Container container)
         {
             container.RegisterSingleton<IHttpClientProvider, HttpClientProvider>();
             container.RegisterSingleton<IHttpClientService, HttpClientService>();
