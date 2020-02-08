@@ -8,12 +8,20 @@ namespace Lychee.HttpClientService
 {
     public class HttpClientService : IHttpClientService
     {
-        private HttpClient HttpClient { get; }
+        private readonly IHttpClientProvider _httpClientProvider;
+        private HttpClient HttpClient { get; set; }
 
-        public HttpClientService(IHttpClientProvider httpClientProvider, string baseUrl)
+        public HttpClientService(IHttpClientProvider httpClientProvider)
         {
+            _httpClientProvider = httpClientProvider;
             HttpClient = httpClientProvider.GetHttpClient();
-            HttpClient.BaseAddress = new Uri(baseUrl);
+        }
+
+
+        public virtual void CreateNewHttpClient(string baseUrl)
+        {
+            HttpClient?.Dispose();
+            HttpClient = _httpClientProvider.CreateNewHttpClient(baseUrl);
         }
 
         /// <summary>
@@ -44,5 +52,7 @@ namespace Lychee.HttpClientService
     {
         Task<T> SendRequest<T>(string path, HttpMethod method,
             Dictionary<string, string> headers) where T : class;
+
+        void CreateNewHttpClient(string baseUrl);
     }
 }

@@ -6,7 +6,12 @@ namespace Lychee.HttpClientService
     {
         public static void RegisterLycheeHttpClientService(this Container container)
         {
-            container.RegisterSingleton<IHttpClientProvider, HttpClientProvider>();
+            container.RegisterSingleton<IHttpClientService, HttpClientService>();
+        }
+
+        public static void RegisterLycheeHttpClientService(this Container container, string baseUrl)
+        {
+            container.RegisterSingleton<IHttpClientProvider>(() => new HttpClientProvider(baseUrl));
             container.RegisterSingleton<IHttpClientService, HttpClientService>();
         }
     }

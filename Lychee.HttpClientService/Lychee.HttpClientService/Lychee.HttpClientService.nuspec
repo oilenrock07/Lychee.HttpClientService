@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Lychee.HttpClientService</id>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <title>Lychee.HttpClientService</title>
     <authors>Cornelio Cawicaan Jr.</authors>
     <owners>Cornelio Cawicaan Jr.</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <description>Send request to the website with authenticated cookie</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Register the base url on class injection.</releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>Lychee HttpClientService</tags>
     <dependencies>
