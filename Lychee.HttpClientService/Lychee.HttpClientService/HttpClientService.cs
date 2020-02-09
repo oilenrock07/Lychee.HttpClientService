@@ -42,7 +42,7 @@ namespace Lychee.HttpClientService
                 message.Headers.Add(header.Key, header.Value);
             }
 
-            var result = await HttpClient.SendAsync(message);
+            var result = await HttpClient.SendAsync(message).ConfigureAwait(false);
             var strResponse = result.Content.ReadAsStringAsync().Result;
             return JsonConvert.DeserializeObject<T>(strResponse);
         }
